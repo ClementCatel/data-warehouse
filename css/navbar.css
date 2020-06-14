@@ -1,0 +1,102 @@
+.navbar {
+    z-index: 100;
+    width: 100%;
+    padding-top: 50px;
+    transition: 0.7s; }
+  
+  .navbar__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+    color: #4B5D68;
+    font-weight: 600;
+    transition: 0.7s; }
+  
+  .navbar__menu {
+    display: none; }
+    .navbar__menu--noMob {
+      display: block; }
+    @media (min-width: 992px) {
+      .navbar__menu {
+        display: block; } }
+    .navbar__menu li {
+      margin-right: 4pt;
+      backface-visibility: hidden;
+      display: inline-block; }
+      @media (min-width: 992px) {
+        .navbar__menu li {
+          margin-right: 40px; } } 
+    .navbar__menu a {
+        color: #4B5D68; }
+      @media (min-width: 992px) {
+        .navbar__menu a {
+          opacity: 0.75; }
+          .navbar__menu a:hover {
+            opacity: 1; }
+          .navbar__menu a:after {
+            display: block;
+            content: '';
+            border-bottom: solid 1px #4B5D68;
+            transform: scaleX(0);
+            transition: transform 250ms ease-in-out; }
+          .navbar__menu a:hover:after {
+            transform: scaleX(1); } }
+  
+  .navbar__menu-mob {
+    display: block; }
+    .navbar__menu-mob--noMob {
+      display: none; }
+    @media (min-width: 992px) {
+      .navbar__menu-mob {
+        display: none; } }
+  
+  .nav__mobile ul {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: block;
+    color: #4B5D68; }
+  
+  .nav__mobile li {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1em 0;
+    display: block;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
+    .nav__mobile li:last-child {
+      border-bottom: none; }
+  
+  .js .nav__mobile {
+    clip: rect(0 0 0 0);
+    max-height: 0;
+    position: absolute;
+    display: block;
+    overflow: hidden;
+    zoom: 1; }
+  
+  .nav__mobile.opened {
+    max-height: 9999px; }
+  
+  .nav-toggle {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none; }
+  
+  @media (min-width: 992px) {
+    .js .nav__mobile {
+      position: relative; }
+    .js .nav__mobile.closed {
+      max-height: none; }
+    .nav-toggle {
+      display: none; } }
+  
+  #toggle svg {
+    height: 1.2em;
+    width: 1.2em;
+    vertical-align: middle; }
